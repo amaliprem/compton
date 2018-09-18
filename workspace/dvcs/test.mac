@@ -14,4 +14,4 @@
 #/process/list
 #/process/setVerbose 2 OpBoundary
 
-/run/beamOn 1
+/run/beamOn 10

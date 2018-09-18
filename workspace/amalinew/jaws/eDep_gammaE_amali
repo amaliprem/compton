@@ -1,0 +1,15 @@
+void eDep_gammaE_amali(){
+  TFile *f = TFile::Open("test00001.root");
+  TTree* tree = (TTree*) f->Get("ComptonG4");
+
+Double_t asym, gammaE;
+  tree->SetBranchAddress("asym", &asym");
+  tree->SetBranchAddress("gammaE", &gammaE);
+ 
+  for (int i=0;i<tree->GetEntries();i++){
+    tree->GetEntry(i);
+   Double_t h->(asym*gammaE);
+   cout << "h" << endl;
+  }
+  
+}
