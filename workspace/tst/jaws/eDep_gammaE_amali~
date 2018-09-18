@@ -1,0 +1,16 @@
+void eDep_gammaE(){
+  TFile *f = TFile::Open("ComptonG4_tungsten_10617_100000.root");
+  TTree* tree = (TTree*) f->Get("ComptonG4");
+ 
+  for (int i=0;i<tree->GetEntries();i++){
+    tree->GetEntry(i);
+    h->Fill(gammaE,jaw_eDep/gammaE);  
+  }
+  TCanvas* c2 = new TCanvas("c2","c2",700,500);
+  h->SetMarkerColor(kRed);
+  //h->SetLineColor(10);
+  h->SetMarkerStyle(7);
+  h->SetTitle("energy deposited in tungsten jaw;gammaE;eDep");  
+  h->Draw("P");
+
+}
