@@ -1,0 +1,20 @@
+<!-- Define the "Chicane" volumes -->
+
+
+<!-- Define the Chicane -->
+
+   <volume name="Chicane">
+     <materialref ref="AirVacuum"/>
+      <solidref ref="ChicaneHollow"/>
+    </volume>
+<!---->
+<volume name="Mat">
+    <materialref ref="AirVacuum"/>
+    <solidref ref="Fill9"/>
+    <auxiliary auxtype="Color" auxvalue="#7CDCDCDC" />
+</volume>
+
+
+
+
+    
